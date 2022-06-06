@@ -27,10 +27,24 @@ generateButton.addEventListener('click',
         }
 
         const finalPrice = price - discount;
+
+        const humanPrice = finalPrice.toFixed(2);
+    
         
         document.getElementById('ticket-name').innerHTML = userName;
-        document.getElementById('ticket-price').innerHTML = finalPrice;
-        document.getElementById('ticket').classList.add(active);
+        document.getElementById('ticket-price').innerHTML = humanPrice + '€';
+        document.getElementById('ticket').classList.add('active');
+        document.getElementById('carriage').innerHTML = Math.floor(Math.random() * 9) + 1;
+        document.getElementById('cp-code').innerHTML = Math.floor(Math.random() * 10000) + 1;
+
+        if (userAge === 'minorenne') {
+            document.getElementById('supply').innerHTML = 'Offerta Minorenni';
+        } else if (userAge === 'over') {
+            document.getElementById('supply').innerHTML = 'Offerta Over65';
+        } else {
+            document.getElementById('supply').innerHTML = 'Biglietto Standard';
+
+        }
     }
 )
 
@@ -40,5 +54,6 @@ cancelTicket.addEventListener('click',
         document.getElementById('user-name').value = ' ';
         document.getElementById('user-km').value = ' ';
         document.getElementById('user-age').value = 'maggiorenne';
+        document.getElementById('ticket').classList.remove('active');
     }
 )

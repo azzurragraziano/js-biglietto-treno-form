@@ -11,12 +11,17 @@
     padding: 10px 20px; 
 }
 
-.ticket
+#ticket
 {
     display: none;
 }
 
-.ticket.active
+#ticket.active
 {
     display: block;
+}
+
+th, td
+{
+    padding: 10px 20px;
 }
