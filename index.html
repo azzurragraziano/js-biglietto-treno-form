@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- USER FORM -->
+    <div class="user-form">
+
+        <!-- user name and lastname -->
+        <div class="form-item">
+            <label for="user-name">nome e cognome</label>
+            <input type="text" id="user-name">
+        </div>
+
+        <!-- user km -->
+        <div class="form-item">
+            <label for="user-km">km da percorrere</label>
+            <input type="number" id="user-km">
+        </div>
+
+        <!-- user age -->
+        <div class="form-item">
+            <label for="user-age">età</label>
+            <select id="user-age">
+                <option value="maggiorenne">maggiorenne</option>
+                <option value="minorenne">minorenne</option>
+                <option value="over">over 65</option>
+            </select>
+        </div>
+
+        <!-- btn -->
+        <div class="form-item">
+            <button id="generate-ticket">genera</button>
+            <button id="cancel-ticket">annulla</button>
+        </div>
+    </div>
+
+    <div id="ticket">
+       <div id="ticket-name"></div>
+       <div id="ticket-price"></div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
